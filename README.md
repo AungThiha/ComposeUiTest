@@ -10,7 +10,7 @@ dependencies {
 `runAndroidComposeUiTest` uses `ActivityScenario` internally to launch an Activity
 ```kotlin
 runAndroidComposeUiTest<YourActivity>(
-    Intent(ApplicationProvider.getApplicationContext(), YourActivity::class.java)
+    startActivityIntent = Intent(ApplicationProvider.getApplicationContext(), YourActivity::class.java)
         .putExtra("key", "value")
 ) {
     // assert composables
