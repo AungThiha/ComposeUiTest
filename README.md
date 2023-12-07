@@ -1,12 +1,12 @@
 # ComposeUiTest
 A tool to launch an activity with intent in instrumented tests and assert composables in the activity, solving the limitation of ComposeTestRule that does not accept an intent as an input for launching activities.
-# Download
+## Download
 ```kotlin
 dependencies {
     androidTestImplementation("io.github.aungthiha:compose-ui-test:1.0.0")
 }
 ```
-# Usage With Intent
+## Usage With Intent
 `runAndroidComposeUiTest` uses `ActivityScenario` internally to launch an Activity
 ```kotlin
 runAndroidComposeUiTest<YourActivity>(
@@ -20,7 +20,7 @@ runAndroidComposeUiTest<YourActivity>(
     // onNodeWithText("hello").assertExists().assertIsDisplayed()
 }
 ```
-# Usage With ActivityScenario
+## Usage With ActivityScenario
 You can also directly use `ActivityScenario` to launch an Activity the way you prefer
 ```kotlin
 runAndroidComposeUiTest(
