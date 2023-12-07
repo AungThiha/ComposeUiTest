@@ -10,7 +10,7 @@
  * Code in this file is written based on the code from
  * https://github.com/androidx/androidx/blob/androidx-main/compose/ui/ui-test-junit4/src/androidMain/kotlin/androidx/compose/ui/test/ComposeUiTest.android.kt
  */
-package aung.compose.ui.test
+package io.github.aungthiha.compose.ui.test
 
 import android.content.Intent
 import android.os.Bundle

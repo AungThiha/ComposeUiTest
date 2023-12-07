@@ -1,4 +1,4 @@
-package aung.compose.ui.test.ui.theme
+package io.github.aungthiha.compose.ui.test.ui.theme
 
 import android.app.Activity
 import android.os.Build

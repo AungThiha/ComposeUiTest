@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "aung.compose.ui.test"
+    namespace = "io.github.aungthiha.compose.ui.test"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "aung.compose.ui.test"
+        applicationId = "io.github.aungthiha.compose.ui.test"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

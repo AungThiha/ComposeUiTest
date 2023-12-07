@@ -1,4 +1,4 @@
-package aung.compose.ui.test
+package io.github.aungthiha.compose.ui.test
 
 import android.content.Intent
 import androidx.compose.ui.test.ExperimentalTestApi

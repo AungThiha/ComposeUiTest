@@ -1,4 +1,4 @@
-package aung.compose.ui.test
+package io.github.aungthiha.compose.ui.test
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,10 +8,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import aung.compose.ui.test.ui.theme.ComposeUiTestTheme
+import io.github.aungthiha.compose.ui.test.ui.theme.ComposeUiTestTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
