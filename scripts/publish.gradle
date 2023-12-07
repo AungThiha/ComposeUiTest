@@ -1,0 +1,66 @@
+apply plugin: 'maven-publish'
+apply plugin: 'signing'
+
+task androidSourcesJar(type: Jar) {
+    archiveClassifier.set('sources')
+    from android.sourceSets.main.java.srcDirs
+    from android.sourceSets.main.kotlin.srcDirs
+}
+
+artifacts {
+    archives androidSourcesJar
+}
+
+// TODO move these two values to library/build.gradle.kts
+group = "io.github.aungthiha"
+version = "1.0.0"
+def ARTIFACT_ID = "compose-ui-test"
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                groupId group
+                artifactId ARTIFACT_ID
+                version version
+
+                // Two artifacts, the `aar` (or `jar`) and the sources
+                from components.findByName("release")
+
+                pom {
+                    name = ARTIFACT_ID
+                    description = "A tool to launch an activity with intent in instrumented test and assert composables in the activity, solving the limitation of ComposeTestRule that does not accept an intent as an input for launching activities."
+                    url = "https://github.com/AungThiha/ComposeUiTest/tree/main"
+                    licenses {
+                        license {
+                            name = "WTFPL"
+                            url = "https://github.com/AungThiha/ComposeUiTest/blob/main/LICENSE"
+                        }
+                    }
+                    developers {
+                        developer {
+                            id = 'AungThiha'
+                            name = 'Aung Thiha'
+                            email = 'mr.aungthiha@gmail.com'
+                        }
+                    }
+
+                    scm {
+                        connection = "scm:git:github.com/AungThiha/ComposeUiTest.git"
+                        developerConnection = "scm:git:ssh://github.com/AungThiha/ComposeUiTest.git"
+                        url = "https://github.com/AungThiha/ComposeUiTest/tree/main"
+                    }
+                }
+            }
+        }
+    }
+}
+
+signing {
+    useInMemoryPgpKeys(
+            rootProject.ext["signing.keyId"],
+            rootProject.ext["signing.key"],
+            rootProject.ext["signing.password"],
+    )
+    sign publishing.publications
+}

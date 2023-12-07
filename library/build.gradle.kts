@@ -1,5 +1,5 @@
 plugins {
-    id("com.android.application")
+    id("com.android.library")
     id("org.jetbrains.kotlin.android")
 }
 
@@ -8,11 +8,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "io.github.aungthiha.compose.ui.test"
         minSdk = 24
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -41,3 +37,5 @@ dependencies {
     implementation("androidx.activity:activity-ktx:1.8.1")
     implementation("androidx.compose.ui:ui-test-junit4-android:1.5.4")
 }
+
+apply(from = "../scripts/publish.gradle")
