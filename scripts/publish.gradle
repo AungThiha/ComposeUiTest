@@ -13,7 +13,7 @@ artifacts {
 
 // TODO move these two values to library/build.gradle.kts
 group = "io.github.aungthiha"
-version = "1.0.0"
+version = "1.0.1"
 def ARTIFACT_ID = "compose-ui-test"
 
 afterEvaluate {
