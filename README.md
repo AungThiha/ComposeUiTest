@@ -1,5 +1,6 @@
 # ComposeUiTest
-A tool to launch an activity with intent in instrumented tests and assert composables in the activity, solving the limitation of ComposeTestRule that does not accept an intent as an input for launching activities.
+A tool to launch an activity with intent in instrumented tests and assert composables in the activity, solving the limitation of ComposeTestRule that does not accept an intent as an input for launching activities. Read [the medium article](https://medium.com/@AungThiha3/jetpack-compose-assert-intent-data-consumption-in-instrumented-tests-5c999d42aee8) to understand why this is essential.
+
 ## Download
 ```kotlin
 dependencies {
